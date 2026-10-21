@@ -1,0 +1,1 @@
+Coalesce node YAML files.
