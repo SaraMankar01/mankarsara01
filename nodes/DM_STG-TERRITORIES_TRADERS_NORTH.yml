@@ -1,0 +1,50 @@
+fileVersion: 1
+id: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+name: TERRITORIES_TRADERS_NORTH
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for TERRITORIES_TRADERS_NORTH"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa24e0c1-edf2-4020-aefd-f9894e0fa7c1
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: HK_H_TERRITORY
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0706f8ef-c9a2-44ca-9f2a-c0c12bd30ebc
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: DSS_CHANGE_HASH_TERR_NORTH
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: TERRITORIES_TRADERS_NORTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

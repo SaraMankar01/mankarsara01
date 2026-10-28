@@ -1,0 +1,61 @@
+fileVersion: 1
+id: 3ed3dde6-5210-4a7c-acf2-b4a42dbbf228
+name: LOAD_CUSTOMER_SSIS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: "Load node for LOAD_CUSTOMER_SSIS"
+  isMultisource: false
+  locationName: DV_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16b8720c-a6da-4762-815c-c19e5bfe63a5
+          stepCounter: 3ed3dde6-5210-4a7c-acf2-b4a42dbbf228
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16b8720c-a6da-4762-815c-c19e5bfe63a5
+                stepCounter: c85432e4-e534-44a8-ad5f-486266da54fe
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CUSTOMER_SSIS: c85432e4-e534-44a8-ad5f-486266da54fe
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CUSTOMER_SSIS
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'CUSTOMER_SSIS') }} "CUSTOMER_SSIS"
+        name: LOAD_CUSTOMER_SSIS
+        noLinkRefs: []
+  name: LOAD_CUSTOMER_SSIS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

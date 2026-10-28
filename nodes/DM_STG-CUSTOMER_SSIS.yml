@@ -1,0 +1,35 @@
+fileVersion: 1
+id: c85432e4-e534-44a8-ad5f-486266da54fe
+name: CUSTOMER_SSIS
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for CUSTOMER_SSIS"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16b8720c-a6da-4762-815c-c19e5bfe63a5
+          stepCounter: c85432e4-e534-44a8-ad5f-486266da54fe
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: CUSTOMER_SSIS
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

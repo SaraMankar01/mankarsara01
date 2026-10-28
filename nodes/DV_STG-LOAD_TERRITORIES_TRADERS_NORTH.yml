@@ -1,0 +1,81 @@
+fileVersion: 1
+id: 47791c46-199c-4a37-a4c0-0dd8a98b29f6
+name: LOAD_TERRITORIES_TRADERS_NORTH
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: "Load node for LOAD_TERRITORIES_TRADERS_NORTH"
+  isMultisource: false
+  locationName: DV_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa24e0c1-edf2-4020-aefd-f9894e0fa7c1
+          stepCounter: 47791c46-199c-4a37-a4c0-0dd8a98b29f6
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: HK_H_TERRITORY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa24e0c1-edf2-4020-aefd-f9894e0fa7c1
+                stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0706f8ef-c9a2-44ca-9f2a-c0c12bd30ebc
+          stepCounter: 47791c46-199c-4a37-a4c0-0dd8a98b29f6
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: DSS_CHANGE_HASH_TERR_NORTH
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0706f8ef-c9a2-44ca-9f2a-c0c12bd30ebc
+                stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          TERRITORIES_TRADERS_NORTH: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: TERRITORIES_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'TERRITORIES_TRADERS_NORTH') }} "TERRITORIES_TRADERS_NORTH"
+        name: LOAD_TERRITORIES_TRADERS_NORTH
+        noLinkRefs: []
+  name: LOAD_TERRITORIES_TRADERS_NORTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

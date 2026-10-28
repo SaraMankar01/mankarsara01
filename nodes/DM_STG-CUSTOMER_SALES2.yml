@@ -1,0 +1,35 @@
+fileVersion: 1
+id: 34c2a3c5-df80-477a-babe-dfe8d725ee04
+name: CUSTOMER_SALES2
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for CUSTOMER_SALES2"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 132f8c8e-a986-44d2-b5f1-3e2c000c3b51
+          stepCounter: 34c2a3c5-df80-477a-babe-dfe8d725ee04
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: CUSTOMER_SALES2
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

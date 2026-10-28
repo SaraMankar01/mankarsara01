@@ -1,0 +1,61 @@
+fileVersion: 1
+id: 23dd731d-1c02-48ec-816d-e9e9779788d9
+name: LOAD_CUSTOMER_SALES2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: "Load node for LOAD_CUSTOMER_SALES2"
+  isMultisource: false
+  locationName: DV_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 132f8c8e-a986-44d2-b5f1-3e2c000c3b51
+          stepCounter: 23dd731d-1c02-48ec-816d-e9e9779788d9
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 132f8c8e-a986-44d2-b5f1-3e2c000c3b51
+                stepCounter: 34c2a3c5-df80-477a-babe-dfe8d725ee04
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CUSTOMER_SALES2: 34c2a3c5-df80-477a-babe-dfe8d725ee04
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CUSTOMER_SALES2
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'CUSTOMER_SALES2') }} "CUSTOMER_SALES2"
+        name: LOAD_CUSTOMER_SALES2
+        noLinkRefs: []
+  name: LOAD_CUSTOMER_SALES2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
