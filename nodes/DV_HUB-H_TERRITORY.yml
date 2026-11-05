@@ -1,0 +1,176 @@
+fileVersion: 1
+id: 889f101c-5c1e-424a-84f8-bcbf9b0eb818
+name: H_TERRITORY
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: DV_HUB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed50f202-f88a-4b45-a706-b0f6bbb8b256
+          stepCounter: 889f101c-5c1e-424a-84f8-bcbf9b0eb818
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: HK_H_TERRITORY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ed50f202-f88a-4b45-a706-b0f6bbb8b256
+                stepCounter: e7338d02-d404-49d7-a315-67f57e54ae42
+            transform: ""
+          - columnReferences:
+              - columnCounter: ed50f202-f88a-4b45-a706-b0f6bbb8b256
+                stepCounter: 2e531672-fac9-41f1-af56-59583e2ab740
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa24e0c1-edf2-4020-aefd-f9894e0fa7c1
+          stepCounter: 889f101c-5c1e-424a-84f8-bcbf9b0eb818
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        name: TERRITORY_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa24e0c1-edf2-4020-aefd-f9894e0fa7c1
+                stepCounter: e7338d02-d404-49d7-a315-67f57e54ae42
+            transform: ""
+          - columnReferences:
+              - columnCounter: fa24e0c1-edf2-4020-aefd-f9894e0fa7c1
+                stepCounter: 2e531672-fac9-41f1-af56-59583e2ab740
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eef079ac-8709-40fc-a1ba-39714e1b0d58
+          stepCounter: 889f101c-5c1e-424a-84f8-bcbf9b0eb818
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        isSystemRecordSource: true
+        name: DSS_RECORD_SOURCE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eef079ac-8709-40fc-a1ba-39714e1b0d58
+                stepCounter: e7338d02-d404-49d7-a315-67f57e54ae42
+            transform: ""
+          - columnReferences:
+              - columnCounter: eef079ac-8709-40fc-a1ba-39714e1b0d58
+                stepCounter: 2e531672-fac9-41f1-af56-59583e2ab740
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b58a98f-5d9f-4429-a673-e453cc43093f
+          stepCounter: 889f101c-5c1e-424a-84f8-bcbf9b0eb818
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemLoadDate: true
+        name: DSS_LOAD_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b58a98f-5d9f-4429-a673-e453cc43093f
+                stepCounter: e7338d02-d404-49d7-a315-67f57e54ae42
+            transform: ""
+          - columnReferences:
+              - columnCounter: 7b58a98f-5d9f-4429-a673-e453cc43093f
+                stepCounter: 2e531672-fac9-41f1-af56-59583e2ab740
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b0b8041-32c9-4017-9865-5e560c2b7056
+          stepCounter: 889f101c-5c1e-424a-84f8-bcbf9b0eb818
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: DSS_CREATE_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b0b8041-32c9-4017-9865-5e560c2b7056
+                stepCounter: e7338d02-d404-49d7-a315-67f57e54ae42
+            transform: ""
+          - columnReferences:
+              - columnCounter: 0b0b8041-32c9-4017-9865-5e560c2b7056
+                stepCounter: 2e531672-fac9-41f1-af56-59583e2ab740
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_TERRITORY_TRADERS_NORTH: e7338d02-d404-49d7-a315-67f57e54ae42
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_TERRITORY_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_TERRITORY_TRADERS_NORTH') }}
+        name: STAGE_TERRITORY_TRADERS_NORTH
+        noLinkRefs: []
+      - aliases:
+          STAGE_TERRITORY_TRADERS_SOUTH: 2e531672-fac9-41f1-af56-59583e2ab740
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_TERRITORY_TRADERS_SOUTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_TERRITORY_TRADERS_SOUTH') }}
+        name: STAGE_TERRITORY_TRADERS_SOUTH
+        noLinkRefs: []
+  name: H_TERRITORY
+  overrideSQL: false
+  schema: HR
+  sqlType: DV:::6
+  type: sql
+  version: 1
+type: Node
