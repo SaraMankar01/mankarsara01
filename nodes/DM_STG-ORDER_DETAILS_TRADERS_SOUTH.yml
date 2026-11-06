@@ -1,0 +1,230 @@
+fileVersion: 1
+id: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+name: ORDER_DETAILS_TRADERS_SOUTH
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for ORDER_DETAILS_TRADERS_SOUTH"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e94e708-b754-409c-b4dc-65b0228e2357
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_order_details
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6369e0a1-6d7f-48fb-8ef7-9b27a1decb73
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_order_details
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b5284ea-daa6-486c-8743-4b317499effb
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_order
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfd25b50-a94a-499d-853f-73ad036d15c6
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_product
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d90862c3-73c1-45f8-8e51-caa0e2fc52ce
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: order_number
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d409e9d-7bbc-4b16-9f2b-d8a009b0c743
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: product_name
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d3de7a6-c62e-4f27-b814-f905f1e5ffcd
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: DATETIME2
+        defaultValue: ""
+        description: ""
+        name: orderdate
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8698b6ba-57fa-408f-bb6a-adae1db1e506
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: unitprice
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4386780-6e7a-40e8-b563-844e549b3a5d
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: quantity
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16047ff8-bb68-4038-be57-7c3ec8ca8bd2
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: discount
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4044d4aa-3923-4e4f-bbd0-313c163a3c24
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_order_details_transact_traders_south
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f7daa1b-795d-426b-9630-719e595105ff
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_order_details_transact_traders_south
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 61dd7336-30ec-44e9-8dab-1e0aed4b01d2
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_order_details_transact_traders_south
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebeb46bf-5be6-4909-a29e-d7a767e8712f
+          stepCounter: d9e5cd8c-1b2a-4098-901e-9a2f59b86340
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_order_details_transact_traders_south
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: ORDER_DETAILS_TRADERS_SOUTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

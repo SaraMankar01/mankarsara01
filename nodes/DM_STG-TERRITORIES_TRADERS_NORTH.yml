@@ -1,0 +1,140 @@
+fileVersion: 1
+id: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+name: TERRITORIES_TRADERS_NORTH
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for TERRITORIES_TRADERS_NORTH"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b70cfc36-85c8-4a49-8fec-ed4f7722fce1
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_territory_regions
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd584950-4a5c-433a-a783-776aef11f8f8
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_territory_regions
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cddfa8d7-2474-41d2-8788-898bcc2f011c
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_region
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0540a99-f8e3-4f4b-916a-8117a7c3a662
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_territory
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9175f70-f951-4269-ab10-575ce3481c48
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: region_id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 926e471d-4f28-42a2-890b-7eaee4d191cc
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: territory_id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8fdb11c-4a45-41b4-8578-647d7d2f6f1a
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(50)
+        defaultValue: ""
+        description: ""
+        name: territorydescription
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4ae1b96-6f72-47e2-8b6b-fda3d7a1b396
+          stepCounter: 32ab8bae-6f82-4b68-90c4-6adc1f37fff3
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_territory_lroc_traders_north
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: TERRITORIES_TRADERS_NORTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

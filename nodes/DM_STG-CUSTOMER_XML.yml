@@ -1,0 +1,110 @@
+fileVersion: 1
+id: f5295f16-280f-48e8-b796-a2c5de4d071b
+name: CUSTOMER_XML
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for CUSTOMER_XML"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cd2774c-ea1b-4bc1-bfa2-8259e0109da1
+          stepCounter: f5295f16-280f-48e8-b796-a2c5de4d071b
+        config: {}
+        dataType: NUMBER(6,0)
+        defaultValue: ""
+        description: ""
+        name: code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffb74c5e-bef8-447a-8f78-4f7466e8e699
+          stepCounter: f5295f16-280f-48e8-b796-a2c5de4d071b
+        config: {}
+        dataType: VARCHAR(45)
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a86e2772-cc95-45a4-ab6f-1f39aa923a24
+          stepCounter: f5295f16-280f-48e8-b796-a2c5de4d071b
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: cat_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1ec2149-7d01-49f0-934f-340d747c9b4b
+          stepCounter: f5295f16-280f-48e8-b796-a2c5de4d071b
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: grp_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de91629b-d592-4496-b8af-6fa7e4c833bf
+          stepCounter: f5295f16-280f-48e8-b796-a2c5de4d071b
+        config: {}
+        dataType: CHAR(20)
+        defaultValue: ""
+        description: ""
+        name: subgrp
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 720b078f-c90d-47e6-b6d4-cf8aac394b98
+          stepCounter: f5295f16-280f-48e8-b796-a2c5de4d071b
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: source_sales
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: CUSTOMER_XML
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,279 @@
+fileVersion: 1
+id: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+name: STAGE_CURRENCY_RATE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DM_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1c14625-5d34-427e-bb43-d253230961ec
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        name: originating_currency_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9fb545b5-3415-4226-9e64-e033418733bd
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f2ead87-97dc-4316-87dd-1621ba53a5b6
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        name: destination_currency_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25e806e7-53c6-46cf-bbf1-4720dad2b570
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 84a2dd1a-0e4d-471b-90c7-8a307078c256
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: effective_from_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aeaf12db-c34b-4731-abe2-083229b798a9
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bff4a005-5dff-40fc-8bd1-550ab229a860
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: thru_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 18d5d573-ae03-49aa-9944-ba6a0e820aa2
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e84b6185-1bee-4786-aa0a-b5580c111c9c
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: NUMBER(18,10)
+        defaultValue: ""
+        description: ""
+        name: exchange_rate
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6d91843-44d6-4d03-84eb-ef2a78ca1b7a
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c8f0eb5-8a51-411c-9027-a6c4faf7bb87
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: exchange_rate_multiplier
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 573032d1-26e3-4ceb-9a4f-5992bee3a71c
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d59d70a1-b4cb-41bf-91cd-ef906779e3a7
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: creating_employee_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 40e29718-02fb-4edc-a3a1-978ca3da3342
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80a34050-9ce6-4c80-9bd6-e9f64af0d196
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: created_datetime
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0141401a-be2f-4162-9f22-9bfb57f7bcb9
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5761e109-2731-4369-af56-b4223844e543
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: last_change_employee_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5b41b2cb-3f90-42a4-a8b4-e547fcade2b6
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 217cb553-043e-4fb1-9960-a621945c9e84
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_change_datetime
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 32241e0f-adf4-466b-8ca4-25f15c41833d
+                stepCounter: e9724926-4491-4692-88d3-7388359af317
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+          stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LOAD_CURRENCY_RATE: e9724926-4491-4692-88d3-7388359af317
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_STG
+            nodeName: LOAD_CURRENCY_RATE
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_STG', 'LOAD_CURRENCY_RATE') }} "LOAD_CURRENCY_RATE"
+        name: STAGE_CURRENCY_RATE
+        noLinkRefs: []
+  name: STAGE_CURRENCY_RATE
+  overrideSQL: false
+  schema: STG
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

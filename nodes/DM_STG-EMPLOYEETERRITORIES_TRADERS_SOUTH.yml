@@ -1,0 +1,110 @@
+fileVersion: 1
+id: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+name: EMPLOYEETERRITORIES_TRADERS_SOUTH
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for EMPLOYEETERRITORIES_TRADERS_SOUTH"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b9dce65-145a-4528-8605-62d3ff3cb7f1
+          stepCounter: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_employee_territories
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b70cfc36-85c8-4a49-8fec-ed4f7722fce1
+          stepCounter: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_employee_territories
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d86a6d7d-6bc7-4b98-ab73-ead834f839e0
+          stepCounter: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_employee
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0540a99-f8e3-4f4b-916a-8117a7c3a662
+          stepCounter: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_territory
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b1aa6fc-f67c-4ccd-a201-9f808bc9f5cc
+          stepCounter: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: employee_id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 30fe91b4-0ab0-4e60-8d15-64b781adb8f8
+          stepCounter: a70bf09a-4cb4-4c50-9457-ff0d964ca36c
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: territory_id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: EMPLOYEETERRITORIES_TRADERS_SOUTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

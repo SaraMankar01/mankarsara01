@@ -1,0 +1,280 @@
+fileVersion: 1
+id: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+name: DS_CUSTOMER_XML
+operation:
+  config:
+    insertStrategy: MERGE
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DM_ODS
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72e53c25-b399-493c-af9c-c9ee8b9de864
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: NUMBER(6,0)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        name: code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4cd2774c-ea1b-4bc1-bfa2-8259e0109da1
+                stepCounter: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7cfc8dd8-6b9a-4730-8d38-e68229440bd7
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: VARCHAR(45)
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffb74c5e-bef8-447a-8f78-4f7466e8e699
+                stepCounter: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 585f214c-1e02-4411-aa9c-35db5dd52b42
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: cat_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a86e2772-cc95-45a4-ab6f-1f39aa923a24
+                stepCounter: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a8d55d3-9822-44c2-b7a4-60e0d4e25e98
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: grp_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c1ec2149-7d01-49f0-934f-340d747c9b4b
+                stepCounter: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d24cc125-1d01-4d03-afe8-92235554c047
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: CHAR(20)
+        defaultValue: ""
+        description: ""
+        name: subgrp
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de91629b-d592-4496-b8af-6fa7e4c833bf
+                stepCounter: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a879678-cf5f-45fb-9576-156d9c2ac216
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: source_sales
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 720b078f-c90d-47e6-b6d4-cf8aac394b98
+                stepCounter: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6c9b0d1-230b-439d-98b3-0303b460ec82
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: dss_start_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02303303-83cf-40a7-83f0-646a39f93fe7
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: dss_end_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST('31-DEC-2999' AS datetime)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c5ba4eee-e8b2-4b63-b505-f7cd4bbb6080
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: CHAR(1)
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: dss_current_flag
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'Y'"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87077f0d-ceee-4176-974d-63435bed0fec
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: dss_version
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "1"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+          stepCounter: 2c273eb5-2cba-423c-be81-fbd3fd41851d
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          LOAD_CUSTOMER_XML: ae162414-406a-4a6d-9ace-ec0bb631d1ac
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: LOAD_CUSTOMER_XML
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'LOAD_CUSTOMER_XML') }} "LOAD_CUSTOMER_XML"
+            LEFT OUTER JOIN (SELECT code, MAX(dss_version) AS dss_version
+            FROM {{ ref('DM_ODS', 'DS_CUSTOMER_XML') }} "DS_CUSTOMER_XML"
+            GROUP BY code) AS vers
+              ON load_customer_xml.code = vers.code
+        name: DS_CUSTOMER_XML
+        noLinkRefs: []
+  name: DS_CUSTOMER_XML
+  overrideSQL: false
+  schema: ODS
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

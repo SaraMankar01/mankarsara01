@@ -1,0 +1,674 @@
+fileVersion: 1
+id: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+name: DIM_ORDER_DATE
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: "Dimension node for DIM_ORDER_DATE"
+  isMultisource: false
+  locationName: DM_DIM
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e414a4d0-ee54-444c-9582-c92396a5243a
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: dim_order_date_key
+        nullable: true
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b24ea98-8355-4805-b2e9-545d5f07ae3e
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: calendar_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(orderdate AS DATE)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e307e74e-8a84-4db6-bf59-186fbc2edfa6
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: cal_month
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "TO_VARCHAR(orderdate, 'MON')"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c72d3603-4854-464b-8b61-7deca46788a3
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_month_no
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "EXTRACT(month FROM orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5d80f51-0024-4a14-ba9f-48b0a8a82b20
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_year
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "EXTRACT(year FROM orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81db2a0b-cce6-4061-84b7-46587bd5f492
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: cal_day_in_week
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "DAYNAME(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79308446-236c-453e-a142-4e0792e9bc7d
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_day_in_week_no
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "DAYOFWEEK(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba13b201-cf1b-4e4c-83b9-7c9df2fe4f89
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_day_in_month
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "EXTRACT(day FROM orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c662351-2a72-449e-9006-29d1e6c793b8
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_day_in_year
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "DAYOFYEAR(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed55bcd2-6ceb-4d3d-97ec-f5f79e2c141e
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_week_in_year
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "WEEKOFYEAR(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c350c81-b01c-4d7a-8e7c-0938fe6cd62a
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: cal_month_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "MONTHNAME(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d951f3c-bbb1-4c97-9b36-fb69def6ea74
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: cal_quarter_no
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "QUARTER(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e48dc573-a050-4092-b78f-8a9b83bcf333
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: cal_quarter
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'Q' || QUARTER(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ffcc99e-270a-483d-94dd-30db991bc7ca
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: financial_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(orderdate AS DATE)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 509421c3-02cf-4329-9813-564f4998b90c
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: fin_day_in_week
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "DAYNAME(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d7e7d76-06cb-4109-9346-b5cddadce730
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_day_in_week_no
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "DAYOFWEEK(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 206efc60-181f-4a08-b676-1f55437920a7
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_day_in_month
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "EXTRACT(day FROM orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d96fe561-8262-4743-9f84-370e99fbf809
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_day_in_year
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "DAYOFYEAR(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0f39400-f290-4d33-abe5-93a24ae09503
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_week_in_month
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CEIL(EXTRACT(day FROM orderdate) / 7)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 883f4df8-5b19-44e6-ba6a-425c75828335
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_week_in_year
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "WEEKOFYEAR(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: af817c19-5d2b-46b5-8b3e-8aa94a1983a3
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_month_no
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "EXTRACT(month FROM orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1cbccfc8-501e-4d71-b021-5808931a1191
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: fin_month
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "TO_VARCHAR(orderdate, 'MON')"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a920ff3-caf6-4d98-84be-147d83921c27
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: fin_month_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "MONTHNAME(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 365e61c6-3714-48d2-a760-7d4551fac145
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: fin_period
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "TO_VARCHAR(orderdate, 'YYYY-MM')"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 381bccb6-8541-4a52-858c-5eeaf92a5f88
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_quarter_no
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "QUARTER(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee686d48-e772-40e4-8045-f696cca88ca0
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: fin_quarter
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'Q' || QUARTER(orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65d33b45-8548-4105-903a-0ef394616d07
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: fin_year
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "EXTRACT(year FROM orderdate)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f392fae8-a4a2-4b5d-95c3-c1246aa87d2a
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: CHAR(1)
+        defaultValue: ""
+        description: ""
+        name: week_day_flag
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CASE WHEN DAYOFWEEK(orderdate) IN (1, 7) THEN 'N' ELSE 'Y' END"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b39c351-6564-4aeb-873b-fc43b229e7db
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: CHAR(1)
+        defaultValue: ""
+        description: ""
+        name: week_end_flag
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CASE WHEN DAYOFWEEK(orderdate) IN (1, 7) THEN 'Y' ELSE 'N' END"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3bc0990-fe1a-45ad-9570-10f61d9835c7
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        name: holiday_desc
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "''"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9bc1124-a51c-4576-ad07-252dfa9df82a
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: CHAR(1)
+        defaultValue: ""
+        description: ""
+        name: holiday_flag
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "'N'"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfbfac79-b231-4f10-bd4c-22b1a05a1820
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: CHAR(1)
+        defaultValue: ""
+        description: ""
+        name: trading_day_flag
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CASE WHEN DAYOFWEEK(orderdate) IN (1, 7) THEN 'N' ELSE 'Y' END"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de2d15d5-3bc7-45c4-82ff-56311a1cb09d
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: trading_days_so_far
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "0"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7479d94b-f05e-43f0-a23f-23cecae67647
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: trading_days_in_mth
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "0"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa47175c-e726-45db-8a07-97850a8d3f3f
+          stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH: 0e5d6751-f613-4749-b712-6af6550a2e39
+          dim_order_date: 345e87d3-64df-4756-8cd6-30b48db99ebc
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH
+          - locationName: DM_DIM
+            nodeName: dim_order_date
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH') }} "STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH"
+            JOIN {{ ref('DM_DIM', 'dim_order_date') }} "dim_order_date" ON STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH.dim_order_date_key = dim_order_date.dim_order_date_key
+        name: DIM_ORDER_DATE
+        noLinkRefs: []
+  name: DIM_ORDER_DATE
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node

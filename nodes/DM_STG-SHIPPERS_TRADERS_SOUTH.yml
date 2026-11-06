@@ -1,0 +1,110 @@
+fileVersion: 1
+id: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+name: SHIPPERS_TRADERS_SOUTH
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for SHIPPERS_TRADERS_SOUTH"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f758d999-041e-4dc1-9437-043b6c3e35f1
+          stepCounter: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_shipper
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e75afb3d-3e86-4b88-99ae-54f2abeffa73
+          stepCounter: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: shipper_name
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b99ed0a0-89c6-4814-a663-ec82de7b456e
+          stepCounter: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: shipperid
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7db6a68b-d879-4239-b787-1178cb08e6e4
+          stepCounter: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+        config: {}
+        dataType: VARCHAR(24)
+        defaultValue: ""
+        description: ""
+        name: phone
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f8d3441-fe1c-4098-ad29-447ec2e40106
+          stepCounter: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_shipper_lroc_traders_south
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef8d4ff9-5c01-45a8-81e6-ad2a47f92156
+          stepCounter: 7b02f2bb-5bf1-490e-a6be-a7cafb0593da
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_shipper_lroc_traders_south
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: SHIPPERS_TRADERS_SOUTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

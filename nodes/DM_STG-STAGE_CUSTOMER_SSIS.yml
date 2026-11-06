@@ -1,0 +1,184 @@
+fileVersion: 1
+id: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+name: STAGE_CUSTOMER_SSIS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DM_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef11a3e7-0b37-4915-84eb-ec20d6049cef
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: customer_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef11a3e7-0b37-4915-84eb-ec20d6049cef
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: VARCHAR(80)
+        defaultValue: ""
+        description: ""
+        name: customer_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7b38204-e90f-4581-a6b1-261a4475bc6d
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: customer_category_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d7b38204-e90f-4581-a6b1-261a4475bc6d
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 064cc04c-8d3f-433e-aff8-9f91887baa2f
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: customer_group_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 064cc04c-8d3f-433e-aff8-9f91887baa2f
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2b6ee44-8b10-402e-b66a-4e58f6109759
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: customer_subgroup_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2b6ee44-8b10-402e-b66a-4e58f6109759
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3477019b-aff1-4dd7-8bb4-fb27ab9b4397
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: sales_source
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3477019b-aff1-4dd7-8bb4-fb27ab9b4397
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+          stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+                stepCounter: f6265409-2426-4feb-bde2-75b039027156
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DS_CUSTOMER_SSIS: f6265409-2426-4feb-bde2-75b039027156
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_ODS
+            nodeName: DS_CUSTOMER_SSIS
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_ODS', 'DS_CUSTOMER_SSIS') }} "DS_CUSTOMER_SSIS"
+            WHERE @v_ds_customer_process_date BETWEEN dss_start_date
+                AND dss_end_date
+        name: STAGE_CUSTOMER_SSIS
+        noLinkRefs: []
+  name: STAGE_CUSTOMER_SSIS
+  overrideSQL: false
+  schema: STG
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

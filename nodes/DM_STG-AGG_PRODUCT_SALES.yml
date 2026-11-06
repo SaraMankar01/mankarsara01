@@ -1,0 +1,129 @@
+fileVersion: 1
+id: 75e6613f-c3fb-485a-ba4d-a87ae284508e
+name: AGG_PRODUCT_SALES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DM_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa04ac05-dbbf-4fa1-b15f-feced5bc6553
+          stepCounter: 75e6613f-c3fb-485a-ba4d-a87ae284508e
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: dim_product_key
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa04ac05-dbbf-4fa1-b15f-feced5bc6553
+                stepCounter: 58a9816d-f8d8-4e67-9208-08a13092bb34
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4608763f-e82b-4d73-afcb-a488b651c6fe
+          stepCounter: 75e6613f-c3fb-485a-ba4d-a87ae284508e
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: dim_order_date_key
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 01f2b343-31de-4776-acf6-8b8af1e655f4
+                stepCounter: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4044d4aa-3923-4e4f-bbd0-313c163a3c24
+          stepCounter: 75e6613f-c3fb-485a-ba4d-a87ae284508e
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: quantity
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "SUM(fact_order_detail.quantity)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+          stepCounter: 75e6613f-c3fb-485a-ba4d-a87ae284508e
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+                stepCounter: 58a9816d-f8d8-4e67-9208-08a13092bb34
+            transform: "CURRENT_TIMESTAMP()"
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DIM_PRODUCT: 58a9816d-f8d8-4e67-9208-08a13092bb34
+          DIM_ORDER_DATE: 4d333500-5498-4fc8-a87c-58eaa147d3f7
+          FACT_ORDER_DETAIL: c39568ed-10ff-4bf5-8a99-01cb86df514e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_DIM
+            nodeName: DIM_PRODUCT
+          - locationName: DM_DIM
+            nodeName: DIM_ORDER_DATE
+          - locationName: DM_FCT
+            nodeName: FACT_ORDER_DETAIL
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_FCT', 'FACT_ORDER_DETAIL') }} "FACT_ORDER_DETAIL", {{ ref('DM_DIM', 'DIM_PRODUCT') }} "DIM_PRODUCT", {{ ref('DM_DIM', 'DIM_ORDER_DATE') }} "DIM_ORDER_DATE"
+            WHERE fact_order_detail.dim_product_key = dim_product.dim_product_key
+                AND fact_order_detail.dim_order_date_key = dim_order_date.dim_order_date_key
+            GROUP BY dim_product.dim_product_key, dim_order_date.dim_order_date_key
+        name: AGG_PRODUCT_SALES
+        noLinkRefs: []
+  name: AGG_PRODUCT_SALES
+  overrideSQL: false
+  schema: EDW
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

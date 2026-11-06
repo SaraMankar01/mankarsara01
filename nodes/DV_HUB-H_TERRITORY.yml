@@ -1,0 +1,182 @@
+fileVersion: 1
+id: a49d6a50-b8c3-4e82-9253-62a8afd84ddc
+name: H_TERRITORY
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: DV_HUB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b70cfc36-85c8-4a49-8fec-ed4f7722fce1
+          stepCounter: a49d6a50-b8c3-4e82-9253-62a8afd84ddc
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_territory
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b70cfc36-85c8-4a49-8fec-ed4f7722fce1
+                stepCounter: 7d60a4a7-dadb-4046-9251-ca5b81cc6051
+            transform: ""
+          - columnReferences:
+              - columnCounter: b70cfc36-85c8-4a49-8fec-ed4f7722fce1
+                stepCounter: 3a02fb01-5a39-476d-8efe-500a985fa1a7
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0540a99-f8e3-4f4b-916a-8117a7c3a662
+          stepCounter: a49d6a50-b8c3-4e82-9253-62a8afd84ddc
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        name: territory_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b0540a99-f8e3-4f4b-916a-8117a7c3a662
+                stepCounter: 7d60a4a7-dadb-4046-9251-ca5b81cc6051
+            transform: ""
+          - columnReferences:
+              - columnCounter: b0540a99-f8e3-4f4b-916a-8117a7c3a662
+                stepCounter: 3a02fb01-5a39-476d-8efe-500a985fa1a7
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+          stepCounter: a49d6a50-b8c3-4e82-9253-62a8afd84ddc
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        isSystemRecordSource: true
+        name: dss_record_source
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: 7d60a4a7-dadb-4046-9251-ca5b81cc6051
+            transform: ""
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: 3a02fb01-5a39-476d-8efe-500a985fa1a7
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+          stepCounter: a49d6a50-b8c3-4e82-9253-62a8afd84ddc
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemLoadDate: true
+        name: dss_load_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: 7d60a4a7-dadb-4046-9251-ca5b81cc6051
+            transform: ""
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: 3a02fb01-5a39-476d-8efe-500a985fa1a7
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: a49d6a50-b8c3-4e82-9253-62a8afd84ddc
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: 7d60a4a7-dadb-4046-9251-ca5b81cc6051
+            transform: ""
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: 3a02fb01-5a39-476d-8efe-500a985fa1a7
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_TERRITORY_TRADERS_SOUTH: 7d60a4a7-dadb-4046-9251-ca5b81cc6051
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_TERRITORY_TRADERS_SOUTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_TERRITORY_TRADERS_SOUTH') }} "STAGE_TERRITORY_TRADERS_SOUTH"
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_HUB', 'H_TERRITORY') }} "H_TERRITORY"
+            WHERE stage_territory_traders_south.territory_id = h_territory.territory_id)
+        name: STAGE_TERRITORY_TRADERS_SOUTH
+        noLinkRefs: []
+      - aliases:
+          STAGE_TERRITORY_TRADERS_NORTH: 3a02fb01-5a39-476d-8efe-500a985fa1a7
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_TERRITORY_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_TERRITORY_TRADERS_NORTH') }} "STAGE_TERRITORY_TRADERS_NORTH"
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_HUB', 'H_TERRITORY') }} "H_TERRITORY"
+            WHERE stage_territory_traders_north.territory_id = h_territory.territory_id)
+        name: STAGE_TERRITORY_TRADERS_NORTH
+        noLinkRefs: []
+  name: H_TERRITORY
+  overrideSQL: false
+  schema: RDV
+  sqlType: DV:::6
+  type: sql
+  version: 1
+type: Node

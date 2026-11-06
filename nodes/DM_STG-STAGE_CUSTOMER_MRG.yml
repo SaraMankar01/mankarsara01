@@ -1,0 +1,291 @@
+fileVersion: 1
+id: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+name: STAGE_CUSTOMER_MRG
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: DM_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef11a3e7-0b37-4915-84eb-ec20d6049cef
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: VARCHAR(10)
+        defaultValue: ""
+        description: ""
+        name: customer_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef11a3e7-0b37-4915-84eb-ec20d6049cef
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: ef11a3e7-0b37-4915-84eb-ec20d6049cef
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: ef11a3e7-0b37-4915-84eb-ec20d6049cef
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: VARCHAR(80)
+        defaultValue: ""
+        description: ""
+        name: customer_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7b38204-e90f-4581-a6b1-261a4475bc6d
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: customer_category_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d7b38204-e90f-4581-a6b1-261a4475bc6d
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: d7b38204-e90f-4581-a6b1-261a4475bc6d
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: d7b38204-e90f-4581-a6b1-261a4475bc6d
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 064cc04c-8d3f-433e-aff8-9f91887baa2f
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: customer_group_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 064cc04c-8d3f-433e-aff8-9f91887baa2f
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: 064cc04c-8d3f-433e-aff8-9f91887baa2f
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 064cc04c-8d3f-433e-aff8-9f91887baa2f
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2b6ee44-8b10-402e-b66a-4e58f6109759
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: VARCHAR(20)
+        defaultValue: ""
+        description: ""
+        name: customer_subgroup_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f2b6ee44-8b10-402e-b66a-4e58f6109759
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: f2b6ee44-8b10-402e-b66a-4e58f6109759
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: f2b6ee44-8b10-402e-b66a-4e58f6109759
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3477019b-aff1-4dd7-8bb4-fb27ab9b4397
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: sales_source
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3477019b-aff1-4dd7-8bb4-fb27ab9b4397
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3477019b-aff1-4dd7-8bb4-fb27ab9b4397
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3477019b-aff1-4dd7-8bb4-fb27ab9b4397
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dfc09bca-0f1b-4349-8f13-67c6b62a52b5
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3ca887ee-5699-47a6-94f6-f844ee0cd43e
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+          stepCounter: 24bf3000-48f3-4b3a-89a3-af5336c072aa
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+                stepCounter: dee4811c-c206-41c3-984e-aba03813b545
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+                stepCounter: a80783a7-70e3-4841-9dca-7dabb714027b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+                stepCounter: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_CUSTOMER_XML: dee4811c-c206-41c3-984e-aba03813b545
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_STG
+            nodeName: STAGE_CUSTOMER_XML
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_STG', 'STAGE_CUSTOMER_XML') }} "STAGE_CUSTOMER_XML"
+        name: STAGE_CUSTOMER_XML
+        noLinkRefs: []
+      - aliases:
+          STAGE_CUSTOMER_SALES2: a80783a7-70e3-4841-9dca-7dabb714027b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_STG
+            nodeName: STAGE_CUSTOMER_SALES2
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_STG', 'STAGE_CUSTOMER_SALES2') }} "STAGE_CUSTOMER_SALES2"
+        name: STAGE_CUSTOMER_SALES2
+        noLinkRefs: []
+      - aliases:
+          STAGE_CUSTOMER_SSIS: aacca21b-7d85-42a8-b93f-b0f5a0f8ed21
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_STG
+            nodeName: STAGE_CUSTOMER_SSIS
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_STG', 'STAGE_CUSTOMER_SSIS') }} "STAGE_CUSTOMER_SSIS"
+        name: STAGE_CUSTOMER_SSIS
+        noLinkRefs: []
+  name: STAGE_CUSTOMER_MRG
+  overrideSQL: false
+  schema: STG
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

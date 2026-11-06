@@ -1,0 +1,212 @@
+fileVersion: 1
+id: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+name: S_REGION_LROC_TRADERS_NORTH
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DV_SAT
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd584950-4a5c-433a-a783-776aef11f8f8
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_region
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd584950-4a5c-433a-a783-776aef11f8f8
+                stepCounter: d5aa0e95-4122-41ef-8fdc-85013273f375
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de0bd7f1-4439-41ef-a9bc-df638ce5001e
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config: {}
+        dataType: CHAR(50)
+        defaultValue: ""
+        description: ""
+        name: regiondescription
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de0bd7f1-4439-41ef-a9bc-df638ce5001e
+                stepCounter: d5aa0e95-4122-41ef-8fdc-85013273f375
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6734aa7c-9c6f-40c9-948c-c55086554c03
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config:
+          is_hd: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5779d7b7-dce6-4d35-b6cc-aa13571fba9c
+                stepCounter: d5aa0e95-4122-41ef-8fdc-85013273f375
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        isSystemRecordSource: true
+        name: dss_record_source
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: d5aa0e95-4122-41ef-8fdc-85013273f375
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemLoadDate: true
+        name: dss_load_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: d5aa0e95-4122-41ef-8fdc-85013273f375
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6c9b0d1-230b-439d-98b3-0303b460ec82
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: dss_start_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87077f0d-ceee-4176-974d-63435bed0fec
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: dss_version
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "COALESCE(current_rows.dss_version, 0) + 1"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 78a665e9-4c47-4c99-bc1a-51e6c257a7c6
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: d5aa0e95-4122-41ef-8fdc-85013273f375
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_REGION_TRADERS_NORTH: d5aa0e95-4122-41ef-8fdc-85013273f375
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_REGION_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_REGION_TRADERS_NORTH') }} "STAGE_REGION_TRADERS_NORTH"
+            LEFT OUTER JOIN (SELECT s_region_lroc_traders_north.hk_h_region, MAX(s_region_lroc_traders_north.dss_start_date) AS dss_start_date, MAX(s_region_lroc_traders_north.dss_version) AS dss_version
+            FROM {{ ref('DV_SAT', 'S_REGION_LROC_TRADERS_NORTH') }} "S_REGION_LROC_TRADERS_NORTH"
+            GROUP BY s_region_lroc_traders_north.hk_h_region) AS current_rows
+              ON stage_region_traders_north.hk_h_region = current_rows.hk_h_region
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_SAT', 'S_REGION_LROC_TRADERS_NORTH') }} "S_REGION_LROC_TRADERS_NORTH"
+            WHERE stage_region_traders_north.hk_h_region = s_region_lroc_traders_north.hk_h_region
+                AND stage_region_traders_north.dss_change_hash_region_lroc_traders_north = s_region_lroc_traders_north.dss_change_hash
+                AND current_rows.dss_start_date = s_region_lroc_traders_north.dss_start_date)
+        name: S_REGION_LROC_TRADERS_NORTH
+        noLinkRefs: []
+  name: S_REGION_LROC_TRADERS_NORTH
+  overrideSQL: false
+  schema: RDV
+  sqlType: DV:::8
+  type: sql
+  version: 1
+type: Node

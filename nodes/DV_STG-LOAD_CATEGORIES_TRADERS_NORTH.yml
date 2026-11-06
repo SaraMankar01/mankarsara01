@@ -1,0 +1,261 @@
+fileVersion: 1
+id: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+name: LOAD_CATEGORIES_TRADERS_NORTH
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: "Load node for LOAD_CATEGORIES_TRADERS_NORTH"
+  isMultisource: false
+  locationName: DV_STG
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ecc14b8-66d1-4f3f-a2cc-1f02e5553d3b
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: category_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0ecc14b8-66d1-4f3f-a2cc-1f02e5553d3b
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da74c7a8-01d9-4d79-9428-89ffceb01dab
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: categoryid
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: da74c7a8-01d9-4d79-9428-89ffceb01dab
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 07bd59e7-8681-4c5a-9374-eaf3aa00b789
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: VARCHAR(4000)
+        defaultValue: ""
+        description: ""
+        name: description
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 07bd59e7-8681-4c5a-9374-eaf3aa00b789
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99908643-d965-4d49-991c-aeba7d2003f7
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_category
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99908643-d965-4d49-991c-aeba7d2003f7
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 720ba845-af4c-4c49-9473-87a64554d3f9
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_category_lroc_traders_north
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 720ba845-af4c-4c49-9473-87a64554d3f9
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1afb22f-4e40-4ad6-ac79-5ded9d53df01
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: dss_change_hash_category_lroc_traders_north
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e1afb22f-4e40-4ad6-ac79-5ded9d53df01
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a3701fe-af9c-48fb-8954-919e471ad72c
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_products_categories_suppliers
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a3701fe-af9c-48fb-8954-919e471ad72c
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac504b98-dbe0-42fd-8bde-beb188acad32
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_products_categories_suppliers
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac504b98-dbe0-42fd-8bde-beb188acad32
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6369e0a1-6d7f-48fb-8ef7-9b27a1decb73
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_products_categories_suppliers
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6369e0a1-6d7f-48fb-8ef7-9b27a1decb73
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96d840f9-61f5-4f4e-9358-f7f6adb5ffa2
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: product_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96d840f9-61f5-4f4e-9358-f7f6adb5ffa2
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9cdf57e-6b76-44d8-80f9-3efb6fad1fa7
+          stepCounter: 7d4af7ce-e71c-4022-aeb0-a670b13d2b6d
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: supplier_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c9cdf57e-6b76-44d8-80f9-3efb6fad1fa7
+                stepCounter: 21dbe181-d057-4092-8109-9beabb516a73
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          CATEGORIES_TRADERS_NORTH: 21dbe181-d057-4092-8109-9beabb516a73
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: CATEGORIES_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'CATEGORIES_TRADERS_NORTH') }} "CATEGORIES_TRADERS_NORTH"
+        name: LOAD_CATEGORIES_TRADERS_NORTH
+        noLinkRefs: []
+  name: LOAD_CATEGORIES_TRADERS_NORTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

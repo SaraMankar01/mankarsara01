@@ -1,0 +1,155 @@
+fileVersion: 1
+id: 52251fc3-da73-4d90-94aa-498b106ec860
+name: COUNTRYCODES_FILE_SOURCES
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for COUNTRYCODES_FILE_SOURCES"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a8f5de6-6f33-475d-94cc-8f85d6f9da53
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(64)
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ea7ec57-ac61-445b-ba17-feb3018fe568
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: alpha_2
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48abcc6a-56d1-4c3b-a57d-2d4cdb9ea2bd
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(4)
+        defaultValue: ""
+        description: ""
+        name: alpha_3
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57945fb2-4f0c-484e-935f-65eb168f30b4
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: country_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 148ed820-6f62-41e9-97eb-af9d9a658c3a
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        name: iso_3166_2
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d37f5e8-91e2-45fb-a5cf-3ac0ad57fdef
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(16)
+        defaultValue: ""
+        description: ""
+        name: region
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 022f3ce3-18e7-446c-a941-fe3e478dce4e
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(32)
+        defaultValue: ""
+        description: ""
+        name: sub_region
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a682622e-9b01-44ae-a46f-aa46c515e16f
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: region_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6af3b8c0-9291-4402-9918-0917d2f10a93
+          stepCounter: 52251fc3-da73-4d90-94aa-498b106ec860
+        config: {}
+        dataType: VARCHAR(8)
+        defaultValue: ""
+        description: ""
+        name: sub_region_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: COUNTRYCODES_FILE_SOURCES
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

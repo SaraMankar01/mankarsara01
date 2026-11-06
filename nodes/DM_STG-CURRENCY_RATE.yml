@@ -1,0 +1,170 @@
+fileVersion: 1
+id: 2e916007-873f-46f4-95b1-e1fc69cde15d
+name: CURRENCY_RATE
+operation:
+  database: ""
+  deployEnabled: true
+  description: "Source node for CURRENCY_RATE"
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9fb545b5-3415-4226-9e64-e033418733bd
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        name: originating_currency_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25e806e7-53c6-46cf-bbf1-4720dad2b570
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        name: destination_currency_code
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aeaf12db-c34b-4731-abe2-083229b798a9
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: effective_from_date
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18d5d573-ae03-49aa-9944-ba6a0e820aa2
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: thru_date
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6d91843-44d6-4d03-84eb-ef2a78ca1b7a
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: NUMBER(18,10)
+        defaultValue: ""
+        description: ""
+        name: exchange_rate
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 573032d1-26e3-4ceb-9a4f-5992bee3a71c
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: exchange_rate_multiplier
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40e29718-02fb-4edc-a3a1-978ca3da3342
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: creating_employee_id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0141401a-be2f-4162-9f22-9bfb57f7bcb9
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: created_datetime
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b41b2cb-3f90-42a4-a8b4-e547fcade2b6
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: last_change_employee_id
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32241e0f-adf4-466b-8ca4-25f15c41833d
+          stepCounter: 2e916007-873f-46f4-95b1-e1fc69cde15d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_change_datetime
+        nullable: true
+        primaryKey: false
+        uniqueKey: false
+  name: CURRENCY_RATE
+  overrideSQL: false
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

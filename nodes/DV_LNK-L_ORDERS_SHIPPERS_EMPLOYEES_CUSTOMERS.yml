@@ -1,0 +1,263 @@
+fileVersion: 1
+id: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+name: L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: DV_LNK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc815487-8aaa-460d-a7f2-c4a96003af0b
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_l_orders_shippers_employees_customers
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc815487-8aaa-460d-a7f2-c4a96003af0b
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: bc815487-8aaa-460d-a7f2-c4a96003af0b
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d6bfff6-aec1-4195-bb6d-6b532934ff16
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_customer
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d6bfff6-aec1-4195-bb6d-6b532934ff16
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 0d6bfff6-aec1-4195-bb6d-6b532934ff16
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b9dce65-145a-4528-8605-62d3ff3cb7f1
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_employee
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b9dce65-145a-4528-8605-62d3ff3cb7f1
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4b9dce65-145a-4528-8605-62d3ff3cb7f1
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e94e708-b754-409c-b4dc-65b0228e2357
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_order
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4e94e708-b754-409c-b4dc-65b0228e2357
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4e94e708-b754-409c-b4dc-65b0228e2357
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43253ed4-9722-44b6-a838-fb6b87d2a2e3
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_shipper
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 43253ed4-9722-44b6-a838-fb6b87d2a2e3
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 43253ed4-9722-44b6-a838-fb6b87d2a2e3
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        isSystemRecordSource: true
+        name: dss_record_source
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemLoadDate: true
+        name: dss_load_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 4fdae70d-df4f-4ff0-b301-643e05507d5c
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: 0e5d6751-f613-4749-b712-6af6550a2e39
+            transform: ""
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: 15c334d9-4f70-4975-a6a2-2178c09d136e
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH: 0e5d6751-f613-4749-b712-6af6550a2e39
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH') }} "STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH"
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_LNK', 'L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS') }} "L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS"
+            WHERE stage_orders_shippers_employees_customers_traders_south.hk_h_customer = l_orders_shippers_employees_customers.hk_h_customer
+                AND stage_orders_shippers_employees_customers_traders_south.hk_h_employee = l_orders_shippers_employees_customers.hk_h_employee
+                AND stage_orders_shippers_employees_customers_traders_south.hk_h_order = l_orders_shippers_employees_customers.hk_h_order
+                AND stage_orders_shippers_employees_customers_traders_south.hk_h_shipper = l_orders_shippers_employees_customers.hk_h_shipper)
+        name: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_SOUTH
+        noLinkRefs: []
+      - aliases:
+          STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH: 15c334d9-4f70-4975-a6a2-2178c09d136e
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH') }} "STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH"
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_LNK', 'L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS') }} "L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS"
+            WHERE stage_orders_shippers_employees_customers_traders_north.hk_h_customer = l_orders_shippers_employees_customers.hk_h_customer
+                AND stage_orders_shippers_employees_customers_traders_north.hk_h_employee = l_orders_shippers_employees_customers.hk_h_employee
+                AND stage_orders_shippers_employees_customers_traders_north.hk_h_order = l_orders_shippers_employees_customers.hk_h_order
+                AND stage_orders_shippers_employees_customers_traders_north.hk_h_shipper = l_orders_shippers_employees_customers.hk_h_shipper)
+        name: STAGE_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS_TRADERS_NORTH
+        noLinkRefs: []
+  name: L_ORDERS_SHIPPERS_EMPLOYEES_CUSTOMERS
+  overrideSQL: false
+  schema: RDV
+  sqlType: DV:::7
+  type: sql
+  version: 1
+type: Node

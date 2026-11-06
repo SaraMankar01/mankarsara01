@@ -1,0 +1,182 @@
+fileVersion: 1
+id: 6c47bdcf-dfae-4236-804a-0cf1eee0dc70
+name: H_CUSTOMER
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: DV_HUB
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d6bfff6-aec1-4195-bb6d-6b532934ff16
+          stepCounter: 6c47bdcf-dfae-4236-804a-0cf1eee0dc70
+        config:
+          is_hk: true
+        dataType: CHAR(32)
+        defaultValue: ""
+        description: ""
+        name: hk_h_customer
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d6bfff6-aec1-4195-bb6d-6b532934ff16
+                stepCounter: f0f58eb3-8e43-4694-a3fa-8310e98b47cf
+            transform: ""
+          - columnReferences:
+              - columnCounter: 0d6bfff6-aec1-4195-bb6d-6b532934ff16
+                stepCounter: 31cd5a67-bc8b-4edd-bda5-791da3a8b850
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+          stepCounter: 6c47bdcf-dfae-4236-804a-0cf1eee0dc70
+        config: {}
+        dataType: VARCHAR(50)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        name: customer_name
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+                stepCounter: f0f58eb3-8e43-4694-a3fa-8310e98b47cf
+            transform: ""
+          - columnReferences:
+              - columnCounter: 24d73917-cce8-4aa0-980f-12412175b0bc
+                stepCounter: 31cd5a67-bc8b-4edd-bda5-791da3a8b850
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+          stepCounter: 6c47bdcf-dfae-4236-804a-0cf1eee0dc70
+        config: {}
+        dataType: VARCHAR(255)
+        defaultValue: ""
+        description: ""
+        isSystemRecordSource: true
+        name: dss_record_source
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: f0f58eb3-8e43-4694-a3fa-8310e98b47cf
+            transform: ""
+          - columnReferences:
+              - columnCounter: 55dc0483-1ca0-46e9-91ce-2c0c26d5a99b
+                stepCounter: 31cd5a67-bc8b-4edd-bda5-791da3a8b850
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+          stepCounter: 6c47bdcf-dfae-4236-804a-0cf1eee0dc70
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemLoadDate: true
+        name: dss_load_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: f0f58eb3-8e43-4694-a3fa-8310e98b47cf
+            transform: ""
+          - columnReferences:
+              - columnCounter: 91d1b797-2a08-4714-98c3-3cf1387fa17e
+                stepCounter: 31cd5a67-bc8b-4edd-bda5-791da3a8b850
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 6c47bdcf-dfae-4236-804a-0cf1eee0dc70
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: f0f58eb3-8e43-4694-a3fa-8310e98b47cf
+            transform: ""
+          - columnReferences:
+              - columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+                stepCounter: 31cd5a67-bc8b-4edd-bda5-791da3a8b850
+            transform: ""
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_CUSTOMER_TRADERS_SOUTH: f0f58eb3-8e43-4694-a3fa-8310e98b47cf
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_CUSTOMER_TRADERS_SOUTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_CUSTOMER_TRADERS_SOUTH') }} "STAGE_CUSTOMER_TRADERS_SOUTH"
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_HUB', 'H_CUSTOMER') }} "H_CUSTOMER"
+            WHERE stage_customer_traders_south.customer_name = h_customer.customer_name)
+        name: STAGE_CUSTOMER_TRADERS_SOUTH
+        noLinkRefs: []
+      - aliases:
+          STAGE_CUSTOMER_TRADERS_NORTH: 31cd5a67-bc8b-4edd-bda5-791da3a8b850
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DV_STG
+            nodeName: STAGE_CUSTOMER_TRADERS_NORTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('DV_STG', 'STAGE_CUSTOMER_TRADERS_NORTH') }} "STAGE_CUSTOMER_TRADERS_NORTH"
+            WHERE NOT EXISTS(SELECT 1
+            FROM {{ ref('DV_HUB', 'H_CUSTOMER') }} "H_CUSTOMER"
+            WHERE stage_customer_traders_north.customer_name = h_customer.customer_name)
+        name: STAGE_CUSTOMER_TRADERS_NORTH
+        noLinkRefs: []
+  name: H_CUSTOMER
+  overrideSQL: false
+  schema: RDV
+  sqlType: DV:::6
+  type: sql
+  version: 1
+type: Node

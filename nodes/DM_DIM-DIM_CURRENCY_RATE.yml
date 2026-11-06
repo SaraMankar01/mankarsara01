@@ -1,0 +1,298 @@
+fileVersion: 1
+id: 9a6330ea-b3c7-4636-84dd-074de907ea95
+name: DIM_CURRENCY_RATE
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: false
+  database: WS_MIGRATION
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: DM_DIM
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c381891-4f7b-4f8d-9b22-8f138f510fcd
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: dim_currency_rate_key
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1c14625-5d34-427e-bb43-d253230961ec
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        name: originating_currency_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1c14625-5d34-427e-bb43-d253230961ec
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f2ead87-97dc-4316-87dd-1621ba53a5b6
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: VARCHAR(5)
+        defaultValue: ""
+        description: ""
+        isBusinessKey: true
+        name: destination_currency_code
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9f2ead87-97dc-4316-87dd-1621ba53a5b6
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 84a2dd1a-0e4d-471b-90c7-8a307078c256
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: effective_from_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 84a2dd1a-0e4d-471b-90c7-8a307078c256
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bff4a005-5dff-40fc-8bd1-550ab229a860
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: thru_date
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bff4a005-5dff-40fc-8bd1-550ab229a860
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e84b6185-1bee-4786-aa0a-b5580c111c9c
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: NUMBER(18,10)
+        defaultValue: ""
+        description: ""
+        name: exchange_rate
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e84b6185-1bee-4786-aa0a-b5580c111c9c
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c8f0eb5-8a51-411c-9027-a6c4faf7bb87
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: exchange_rate_multiplier
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c8f0eb5-8a51-411c-9027-a6c4faf7bb87
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d59d70a1-b4cb-41bf-91cd-ef906779e3a7
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: creating_employee_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d59d70a1-b4cb-41bf-91cd-ef906779e3a7
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80a34050-9ce6-4c80-9bd6-e9f64af0d196
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: created_datetime
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80a34050-9ce6-4c80-9bd6-e9f64af0d196
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5761e109-2731-4369-af56-b4223844e543
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        name: last_change_employee_id
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5761e109-2731-4369-af56-b4223844e543
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 217cb553-043e-4fb1-9960-a621945c9e84
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_change_datetime
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 217cb553-043e-4fb1-9960-a621945c9e84
+                stepCounter: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+            transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1a6d9d6b-e0fd-41ff-b7f1-7f3c47c29319
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: dss_create_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ffd1b05-53a3-41e5-9195-34f701bbcccb
+          stepCounter: 9a6330ea-b3c7-4636-84dd-074de907ea95
+        config: {}
+        dataType: TIMESTAMP_NTZ
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: dss_update_time
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "CAST(CURRENT_TIMESTAMP AS TIMESTAMP)"
+        uniqueKey: false
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STAGE_CURRENCY_RATE: 90b3e3ae-2503-46c2-bcae-95ec60dec1a6
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DM_STG
+            nodeName: STAGE_CURRENCY_RATE
+        join:
+          joinCondition: |-
+            FROM {{ ref('DM_STG', 'STAGE_CURRENCY_RATE') }} "STAGE_CURRENCY_RATE"
+        name: DIM_CURRENCY_RATE
+        noLinkRefs: []
+  name: DIM_CURRENCY_RATE
+  overrideSQL: false
+  schema: EDW
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node
